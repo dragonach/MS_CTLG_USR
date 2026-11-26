@@ -1,6 +1,11 @@
 name: Hola Mundo
 
-on: [push]
+# on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   primer_job:
@@ -8,9 +13,9 @@ jobs:
 
     steps:
 #    - uses: actions/checkout@v2
-    - name: Run a one-line script
+    - name: Primer Paso ejecuta un script
       run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Segundo Paso ejecuta un script
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
