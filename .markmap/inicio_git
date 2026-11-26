@@ -1,0 +1,82 @@
+
+# Crear repositorio local y conectarlo a GitHub
+
+## 1. Preparar el entorno
+### Verificar instalación
+- git --version
+### Configurar identidad (primera vez)
+- git config --global user.name "Tu Nombre"
+- git config --global user.email "correo@ejemplo.com"
+### Verificar configuración
+- git config --list
+
+## 2. Crear repositorio local
+### Crear directorio del proyecto
+- mkdir mi-proyecto
+### Entrar al directorio
+- cd mi-proyecto
+### Inicializar repositorio
+- git init
+### Verificar estado
+- git status
+
+## 3. Preparar archivos
+### Crear archivos del proyecto
+- README.md
+- .gitignore
+- Archivos fuente
+### Revisar archivos pendientes
+- git status
+### Agregar archivos al área de preparación
+- git add .
+### Verificar archivos preparados
+- git status
+
+## 4. Crear primer commit
+### Registrar cambios
+- git commit -m "Initial commit"
+### Verificar historial
+- git log --oneline
+
+## 5. Crear repositorio remoto en GitHub
+### Acceder a GitHub
+- https://github.com
+### Crear nuevo repositorio
+- New repository
+### Configurar repositorio
+- Nombre del repositorio
+- Descripción (opcional)
+- Público o privado
+### IMPORTANTE
+- No inicializar con README
+- No agregar .gitignore
+- No agregar licencia
+### Copiar URL del repositorio
+- HTTPS o SSH
+
+## 6. Conectar repositorio local con GitHub
+### Registrar repositorio remoto
+- git remote add origin https://github.com/usuario/mi-proyecto.git
+### Verificar conexión configurada
+- git remote -v
+### Renombrar rama principal (si es necesario)
+- git branch -M main
+
+## 7. Publicar repositorio en GitHub
+### Enviar rama local al remoto
+- git push -u origin main
+### Verificar publicación
+- Revisar repositorio en GitHub
+
+## 8. Flujo de trabajo posterior
+### Modificar archivos
+- Editar código
+### Revisar cambios
+- git status
+- git diff
+### Preparar cambios
+- git add .
+### Crear commit
+- git commit -m "Descripción del cambio"
+### Publicar cambios
+- git push
