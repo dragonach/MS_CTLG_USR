@@ -3,7 +3,7 @@ name: Hola Mundo
 on: [push]
 
 jobs:
-  build:
+  primer_job:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,8 +14,9 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-  comando:
+  segundo_job:
     runs-on: ubuntu-latest
+    needs: primer_job
     steps:
       - name: Ejecuta el comando ls
         run: ls
