@@ -11,3 +11,4 @@ runs:
         echo "Segundo comando de my action"
         ls -l 
         pwd
+        shell
