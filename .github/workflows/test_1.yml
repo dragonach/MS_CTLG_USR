@@ -84,6 +84,4 @@ jobs:
           java-version: '23'
           cache: 'maven'
       - name : Build with Maven
-        run: bash ./mvnw --batch-mode --no-transfer-progress package
-      - name: Ejecuta pruebas unitarias
-        run: bash ./mvnw --batch-mode --no-transfer-progress test.
+        run: bash ./mvnw --batch-mode --no-transfer-progress clean verify
