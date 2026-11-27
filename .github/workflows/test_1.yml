@@ -72,19 +72,6 @@ jobs:
     needs: cuarto_job
     name: Workflow para CI/CD de Java con Maven
 
-    services:
-      sql_server:
-        image: mcr.microsoft.com/mssql/server:2019-latest
-        ports:
-          - 1433:1433
-        env:
-          SA_PASSWORD: "YourStrong!Passw0rd"
-          ACCEPT_EULA: "Y"
-      
-      maven:
-        image: maven:3.8.6-openjdk-23
-        ports:
-          - 8080:8080
       
 
     steps:
