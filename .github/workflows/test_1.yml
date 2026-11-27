@@ -34,6 +34,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+
   segundo_job:
     runs-on: ubuntu-latest
     needs: primer_job
@@ -55,3 +57,12 @@ jobs:
         uses: ./.github/actions/my_action/
         with:
           my_input: "value for my input"
+
+  cuarto_job:
+    runs-on: ubuntu-latest
+    needs: tercer_job
+    steps:
+      - name: Obtener variable
+        run: echo "Valor ${{vars.MY_VARIABLE}}"
+      - name: Obtener secreto
+        run: echo "Valor ${{secrets.MY_SECRET}}"
