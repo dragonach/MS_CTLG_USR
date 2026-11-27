@@ -1,0 +1,13 @@
+name: "My Action"
+description: "This is my custom action"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: "Run a script"
+      run: |
+        echo "Primer comando de my action"
+        echo "Segundo comando de my action"
+        ls -l 
+        pwd
