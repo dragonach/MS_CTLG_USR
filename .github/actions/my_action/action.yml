@@ -17,5 +17,6 @@ runs:
         ls -l 
         echo "Segundo comando de my action"
         pwd
+        echo "Comando con input:"
         echo "Input value: ${{ inputs.my_input }}"
       shell: bash
