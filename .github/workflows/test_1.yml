@@ -31,4 +31,4 @@ jobs:
     needs: segundo_job
     steps:
       - name: Ejecuta el my_action
-        uses: ./.github/actions/my_action
+        uses: ./.github/actions/my_action/my_action.yml
